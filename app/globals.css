@@ -1,0 +1,364 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ html,
+ body,
+ :root{
+  height: 100%;
+ }
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  
+  }
+}
+.social-container {
+
+  width: 80%;
+  background:none;
+  padding: 25px 50px 25px 50px;
+  display: flex;
+   align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+
+  
+}
+
+a.social {
+  margin: 0 2rem;
+  transition: transform 250ms;
+  display: inline-block;
+  align-content:center;
+
+    box-shadow: white;
+    border-radius: 70px;
+    cursor: pointer;
+    z-index: 3;
+    transition: top .3s;
+}
+
+a.social:hover {
+  transform: translateY(-10px);
+}
+
+a.linked-in {
+  color: #0077B5;
+}
+
+a.facebook {
+  color: #1023ee;
+}
+
+a.twitter {
+  color:rgb(60, 163, 232);
+}
+
+a.instagram {
+  color: rgb(181, 66, 162);
+}
+a.github {
+  color:white;
+}
+a.whatsapp {
+  color: rgb(34, 210, 52);
+}
+.video-container {
+  
+  margin: 40px 220px 150px 230px; 
+}
+
+.navigate {
+  display: flex; /* Enable flexbox */
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-evenly;
+}
+.navigate a { /* Apply styles to links */
+  padding: 2rem; /* Add space between links */
+}
+.heading-container {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center;  /* Horizontally centers content */
+}
+
+
+
+/* Important: Address overflow of content below the nav bar */
+
+
+.landing-navbar {
+  position: fixed;
+  top: 0; /* Place it at the top of the viewport */
+  left: 0; /* Align it to the left edge */
+  width: 100%; /* Make it span the entire width */
+  z-index: 10; /* Ensure it stays on top of other elements */
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+  margin-right: 10px;
+  padding: 30px;
+  /*border: 1px solid #ddd;*/
+  border-radius: 5px;
+  background-color:none;
+  justify-content: flex-start;
+  width: 500px;
+  height: 600px;
+}
+
+.contact-form h1 {
+  text-align: center;
+  text-size-adjust:initial;
+  margin-bottom: 50px;
+  color:white;
+}
+.contact-form h4 {
+  color:white;
+}
+
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3b3939;
+  border-radius: 3px;
+  background-color:none;
+}
+
+.form-group textarea {
+  height: 150px;
+}
+
+
+.contact-form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: #3e8e41;
+}
+.contact-container {
+  display: flex; /* Make the container a flexbox */
+}
+
+.contact-image {
+  flex: 0 0 200px; /* Set fixed width for image */
+  height: 700px;
+  width: 500px; /* Allow image to adjust height */
+  object-fit: cover; /* Scale image to fit container */
+  margin-right: 0px;
+  margin-top: 70px;
+  margin-left: 80px; /* Add margin for spacing */
+}
+
+.form-container {
+  flex: 1; /* Form takes up remaining space */
+}
+.eapps-form-header-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 10px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.s2 {
+  background:#f5f5f5;
+  position: relative;
+  display: inline-block;
+  display: flex; /* Enable flexbox */
+  justify-content: flex-start; /* Distribute items evenly */
+  align-content: center; 
+  flex-direction: row;
+  justify-content: flex-start;
+
+  }
+  .s2 title{
+    text-align: center;
+    text-size-adjust: 5px;
+    text-align: center;
+  margin-bottom: 50px;
+  color:black;
+    
+  }
+  /* Base styles for section and title */
+.s2 {
+  padding: 50px 0; /* Adjust padding as needed */
+}
+
+.landing_title {
+  text-align: center;
+  animation: entrance 1s ease-in-out; /* Animation name, duration, timing function */
+}
+
+@keyframes entrance {
+  from { opacity: 0; transform: translateY(20px); } /* Start - invisible and slightly down */
+  to { opacity: 1; transform: translateY(0); } /* End - visible and in place */
+}
+
+/* Styles for LearningCard elements */
+.learning_card_grid {
+  display:flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px; /* Adjust gap between cards */
+  margin-left: 110px;
+  justify-content: center;
+  align-content: space-evenly;
+  text-overflow:none;
+}
+
+.LearningCard {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding-left: 60px;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out; /* Properties, duration, timing */
+  animation: card-appear 0.5s ease-in-out; /* New animation for card appearance */
+}
+
+.LearningCard img {
+  display: block;
+  margin: 0 auto; 
+  object-fit: cover;/* Centers image horizontally within card */
+}
+.LearningCard img:hover {
+  transform: scale(1.1); 
+
+  
+}
+
+.LearningCard:hover, .LearningCard:focus {
+  transform: scale(1.05); /* Optional hover/focus effect - slight scale up */
+  opacity: 0.8; /* Optional hover/focus effect - slight opacity change */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add subtle hover shadow */
+}
+
+/* Remove unnecessary line breaks */
+.learning_card_grid br {
+  display:flex;
+}
+
+/* New animation for card appearance */
+@keyframes card-appear {
+  from { opacity: 0; transform: translateY(20px); } /* Start - invisible and slightly up */
+  to { opacity: 1; transform: translateY(0); } /* End - visible and in place */
+}
+.card-title {
+  font-size: 20px;  /* Increase font size */
+  color: black;        /* Set color */
+  margin-bottom: 10px;/* Add some margin for spacing */
+  text-align: center;
+}
+.learning_card_grid .learning-card { /* Target all learning cards */
+  transition: transform 0.3s ease-in-out;  /* Smooth animation on hover */
+}
+
+.learning_card_grid .learning-card:hover {
+  transform: scale(1.1);  /* Increase card size on hover */
+}
+
+.learning_card .learning-info .roundbg {
+  display: flex;
+  align-content: center;
+  margin: 20px;
+  justify-content:center;
+  padding-right: 10px;
+}
+  
+
+
+
+
